@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toys</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Import Google Icon Font-->
+
+  <link rel="stylesheet" href="materialize.min.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+</head>
+
+<body onload="
+M.toast({html: 'Welcome to the Toys Section!'})">
+
+  <nav style="display: inline-block; margin-bottom: 100px;">
+
+    <div style=" background-color: #ef6c00; height: 125px;" class="nav-wrapper">
+        <a  href="http://localhost:4000" class="brand-logo"><img style="width: 150px; height: 100px; margin-top: 10px; border-radius: 25%;" src="Logo.png" alt="Huge Basket"></a>
+      <section style="float: left;" class="bg-indigo-dark">
+        <div style="text-align: center;" class="container mx-auto py-8">
+
+          <div style=" margin-left: 200px; margin-top: 25px; width: 650px;" class="input-field">
+            <i class="material-icons prefix">search</i>
+            <input id="icon_telephone" type="tel" class="validate">
+            <label for="icon_telephone">Search</label>
+
+
+          </div>
+
+        </div>
+      </section>
+
+      <ul style="display: inline-block;" class="right hide-on-med-and-down">
+
+        <li><a data-position="bottom" data-tooltip="Food" href="http://localhost:4000/food"
+            class="btn-floating pulse tooltipped"><i class="material-icons">local_dining</i> </a></li>
+        <li><a data-position="bottom" data-tooltip="Toys" href="http://localhost:4000/toys" class="btn-floating pulse tooltipped"><i
+              class="material-icons">toys</i></a></li>
+
+        <li><a data-position="bottom" data-tooltip="More" href="http://localhost:4000/cart"
+            class="btn-floating pulse tooltipped"><i class="material-icons">shopping_cart</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+
+  <a style="text-align: center; margin-left: 600px;" href="#!" id="sign-in"
+    class="btn waves-effect waves-teal scale-transition">View Products</a>
+
+  <div class="z-depth-5" class="row">
+    <div class="column" style="margin-bottom: 200px;">
+      <div class="row waves-light scale-transition scale-out ">
+        <div class="col">
+          <div class="card">
+            <div style="width: 400px; margin-left: 30px; height: 250px;" class="card-image">
+              <img
+                src="https://api.time.com/wp-content/uploads/2015/06/lego.jpg">
+              <form method="POST" action="/toys">
+                <textarea style="display: none;" name="Title" id="" cols="30" rows="10">Building Blocks Of Life</textarea>
+                <textarea style="display: none;" name="Price" id="" cols="30" rows="10">50</textarea>
+                <textarea style="display: none;" name="Description" id="" cols="30"
+                  rows="10">The Building Blocks Of Life program helps students reiteirtae creativity and creating their own life and imaginationusing just a few blocks! </textarea>
+                <textarea style="display: none;" name="Image" id="" cols="30"
+                  rows="10">https://api.time.com/wp-content/uploads/2015/06/lego.jpg</textarea>
+                <button type="submit" style="width: 0px; display: block;"><a
+                    class="btn-floating halfway-fab waves-effect waves-light red"><i
+                      class="material-icons">add</i></a></button>
+            </div>
+            <div class="card-content">
+
+              <span name="cardtitle" class="cardtitle">Building Blocks Of Life</span>
+              <h6 style="display: inline-block;"><strong>Price</strong> - $</h6>
+              <h6 id="price" style="display: inline-block;">50</h6>
+              <p>The Building Blocks Of Life program helps students reiteirtae creativity and creating their own life and imaginationusing just a few blocks! </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="column" style="margin-bottom: 200px;">
+      <div class="row waves-light scale-transition scale-out ">
+        <div class="col">
+          <div class="card">
+            <div style="width: 400px; margin-left: 30px; height: 250px;" class="card-image">
+              <img src="https://assets.weforum.org/article/image/5wlXbzjwAITqYYyaeCDcvR5S1QN39afvkA3soHBBv04.jpg">
+              <form method="POST" action="/toys">
+                <textarea style="display: none;" name="Title" id="" cols="30" rows="10">EduGaming</textarea>
+                <textarea style="display: none;" name="Price" id="" cols="30" rows="10">1000</textarea>
+                <textarea style="display: none;" name="Description" id="" cols="30"
+                  rows="10">The EduGaming program allows children to play video game, and also learn thorugh them too!</textarea>
+                <textarea style="display: none;" name="Image" id="" cols="30"
+                  rows="10">https://assets.weforum.org/article/image/5wlXbzjwAITqYYyaeCDcvR5S1QN39afvkA3soHBBv04.jpg</textarea>
+                <button> <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                      class="material-icons">add</i></a></button>
+            </div>
+            <div class="card-content">
+              <span class="card-title">EduGaming</span>
+              <h6 style="display: inline-block;"><strong>Price</strong> - $</h6>
+              <h6 id="price" style="display: inline-block;">1000</h6>
+              <p>The EduGaming program allows children to play video game, and also learn thorugh them too!</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="column" style="margin-bottom: 200px;">
+      <div class="row waves-light scale-transition scale-out ">
+        <div class="col">
+          <div class="card">
+            <div style="width: 400px; margin-left: 30px; height: 250px;" class="card-image">
+              <img
+                src="https://lithub.com/wp-content/uploads/2019/07/used-books-store-2.jpg">
+              <form method="POST" action="/toys">
+                <textarea style="display: none;" name="Title" id="" cols="30" rows="10">Imagiland!</textarea>
+                <textarea style="display: none;" name="Price" id="" cols="30" rows="10">250</textarea>
+                <textarea style="display: none;" name="Description" id="" cols="30"
+                  rows="10">The land of imagination program stored in just a few words!</textarea>
+                <textarea style="display: none;" name="Image" id="" cols="30"
+                  rows="10">https://lithub.com/wp-content/uploads/2019/07/used-books-store-2.jpg</textarea>
+                <button> <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                      class="material-icons">add</i></a></button>
+            </div>
+            <div class="card-content">
+              <span class="card-title">Imagiland!</span>
+              <h6 style="display: inline-block;"><strong>Price</strong> - $</h6>
+              <h6 id="price" style="display: inline-block;">250</h6>
+              <p>The land of imagination program stored in just a few words!</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column" style="margin-bottom: 200px;">
+      <div class="row waves-light scale-transition scale-out  ">
+        <div class="col">
+          <div class="card">
+            <div style="width: 400px; margin-left: 30px; height: 200px;" class="card-image">
+              <img style="width: 350px; margin-right: 30px; height: 250px; margin-bottom: 100px;"  src="https://media.karousell.com/media/photos/products/2019/07/29/brand_new_and_preloved_stuff_toys_1564331774_e0d3d241_progressive.jpg">
+
+              <form method="POST" action="/toys">
+                <textarea style="display: none;" name="Title" id="" cols="30" rows="10">Stuffed In Softness</textarea>
+                <textarea style="display: none;" name="Price" id="" cols="30" rows="10">50</textarea>
+                <textarea style="display: none;" name="Description" id="" cols="30"
+                  rows="10">The Stuffed In Softness program allows children to have fun with softness and develop love and affection and to be able to care</textarea>
+                <textarea style="display: none;" name="Image" id="" cols="30"
+                  rows="10">https://media.karousell.com/media/photos/products/2019/07/29/brand_new_and_preloved_stuff_toys_1564331774_e0d3d241_progressive.jpg</textarea>
+                <button> <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                      class="material-icons">add</i></a></button>
+            </div>
+            <div class="card-content">
+              <span style="margin-top: 50px;" class="card-title">Stuffed In Softness</span>
+              <h6 style="display: inline-block;"><strong>Price</strong> - $</h6>
+              <h6 id="price" style="display: inline-block;">45</h6>
+              <p>The Stuffed In Softness program allows children to have fun with softness and develop love and affection and to be able to care</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="column" style="margin-bottom: 200px;">
+      <div class="row waves-light scale-transition scale-out ">
+        <div class="col">
+          <div class="card">
+            <div style="width: 400px; margin-left: 30px; height: 250px;" class="card-image">
+              <img src="https://i.pinimg.com/originals/5b/e4/89/5be4896575a57e453a19da3061b7fb89.jpg">
+
+              <form method="POST" action="/toys">
+                <textarea style="display: none;" name="Title" id="" cols="30" rows="10">Vikings and Vintage</textarea>
+                <textarea style="display: none;" name="Price" id="" cols="30" rows="10">1500</textarea>
+                <textarea style="display: none;" name="Description" id="" cols="30"
+                  rows="10">The Vikings and Vintage rogram allows children to be able to play and learn about the olden era through vintage toys!</textarea>
+                <textarea style="display: none;" name="Image" id="" cols="30"
+                  rows="10">https://i.pinimg.com/originals/5b/e4/89/5be4896575a57e453a19da3061b7fb89.jpg</textarea>
+                <button> <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                      class="material-icons">add</i></a></button>
+            </div>
+            <div class="card-content">
+              <span class="card-title">Vikings and Vintage</span>
+              <h6 style="display: inline-block;"><strong>Price</strong> - $</h6>
+              <h6 id="price" style="display: inline-block;">1500</h6>
+              <p>The Vikings and Vintage rogram allows children to be able to play and learn about the olden era through vintage toys!</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="column" style="margin-bottom: 200px;">
+      <div class="row waves-light scale-transition scale-out ">
+        <div class="col">
+          <div class="card">
+            <div style="width: 350px; margin-left: 30px; height: 250px;" class="card-image">
+              <img style="width: 350px; margin-left: 30px; height: 300px;" src="https://cdn.shopify.com/s/files/1/2281/5369/products/100922_1_512x512.jpg?v=1589481314">
+              <form method="POST" action="/toys">
+                <textarea style="display: none;" name="Title" id="" cols="30" rows="10">Myths and Legends</textarea>
+                <textarea style="display: none;" name="Price" id="" cols="30" rows="10">2000</textarea>
+                <textarea style="display: none;" name="Description" id="" cols="30"
+                  rows="10">The Myths and Legends program allows children to learn about ancient myths and legends from Greec to Egypt. Native America to Japan! This even helps them create their own professional myths!</textarea>
+                <textarea style="display: none;" name="Image" id="" cols="30"
+                  rows="10">https://cdn.shopify.com/s/files/1/2281/5369/products/100922_1_512x512.jpg?v=1589481314</textarea>
+                <button> <a class="btn-floating halfway-fab waves-effect waves-light red"><i
+                      class="material-icons">add</i></a></button>
+            </div>
+            <div class="card-content">
+              <span class="card-title" style="margin-top: 50px;">Myths and Legends</span>
+              <h6 style="display: inline-block;"><strong>Price</strong> - $</h6>
+              <h6 id="price" style="display: inline-block;">2000</h6>
+              <p>The Myths and Legends program allows children to learn about ancient myths and legends from Greec to Egypt. Native America to Japan! This even helps them create their own professional myths!</p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+     <!-- FOOTER -->
+     <footer id="footer" style="background-color:#ffab40;" class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5 class="white-text">Huge Basket</h5>
+              <p class="grey-text text-lighten-4">Huge Basket is a small initiative to help farmers and people who are in
+                need of resources. We also help people who need gifts and sell other stuff to help too. </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Contact Us</h5>
+              <p class="grey-text text-lighten-4">For any help, please feel free to drop us a message or use any of the link
+                below!</p>
+              <ul>
+                <li><a class="grey-text text-lighten-3"
+                    href="randomemail@hugebasket.in"><u>randomemail@hugebasket.in</u></a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">+91 882935810</a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.amazon.com/"><u>Amazon Our Partner</u></a></li>
+                <li><a class="grey-text text-lighten-3" href="https://www.flipkart.com"><u>Flipcart Our Partner</u></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+            No © 2020 Huge Basket
+            <a class="grey-text text-lighten-4 right" href="#!"></a>
+          </div>
+        </div>
+      </footer>
+    
+      <ul style="text-align: center; margin-left: 600px; margin-top: 10px;" class="pagination">
+        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="http://localhost:4000">1</a></li>
+        <li class="waves-effect"><a href="http://localhost:4000/food">2</a></li>
+        <li class="waves-effect"><a href="http://localhost:4000/toys">3</a></li>
+        <li class="waves-effect"><a href="http://localhost:4000/cart">4</a></li>
+        <li class="waves-effect"><a href="https://genderequality.netlify.app/">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
+    
+
+  <style type="text/css">
+    .m20_0 {
+      margin: 20px 0px;
+    }
+  </style>
+  <div class="m20_0">
+    <!-- Element Showed -->
+    <div class="fixed-action-btn waves-orange
+      " style="bottom: 45px; right: 24px; ">
+      <a id="menu" onclick="$('.tap-target').tapTarget('open')" class="btn btn-floating btn-large waves-orange
+            "><i class="material-icons">menu</i></a>
+    </div>
+
+    <!-- Start Tap Target Structure -->
+    <div style="background-color: #00ff87;" class="tap-target " data-activates="menu">
+      <div class="tap-target-content white-text">
+        <h5 style="text-align: center;">Huge Basket</h5>
+        <p>This initiavtive is made by a 12 year old kid (me), I created this website too! This is one of the many
+          initiaives that I am trying to take to complete the SDG's (Sustainable Development Goals) 2030! My first
+          initiative was to Increase <a href="https://genderequality.netlify.app/">Gender Equality</a>. </p>
+      </div>
+    </div>
+    <!-- End Tap Target Structure -->
+  </div>
+  </div>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 10px;
+      height: 300px;
+      /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+
+</body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+  $('#sign-in').click(function () {
+    $('#sign-in').addClass('scale-out');
+    $('#sign-up').addClass('scale-out');
+    $('.row').removeClass('scale-out').addClass('scale-in');
+  })
+</script>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="materialize.js"></script>
+<script src="init.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!--Import materialize.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+</html>

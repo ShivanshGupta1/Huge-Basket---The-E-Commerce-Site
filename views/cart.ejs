@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Import Google Icon Font-->
+
+  <link rel="stylesheet" href="materialize.min.css">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav style="display: inline-block; margin-bottom: 100px;">
+
+    <div style=" background-color: #ef6c00; height: 125px;" class="nav-wrapper">
+      <a  href="http://localhost:4000" class="brand-logo"><img style="width: 150px; height: 100px; margin-top: 10px; border-radius: 25%;" src="Logo.png" alt="Huge Basket"></a>
+      <section style="float: left;" class="bg-indigo-dark">
+        <div style="text-align: center;" class="container mx-auto py-8">
+
+          <div style=" margin-left: 200px; margin-top: 25px; width: 650px;" class="input-field">
+            <i class="material-icons prefix">search</i>
+            <input id="icon_telephone" type="tel" class="validate">
+            <label for="icon_telephone">Search</label>
+
+
+          </div>
+
+        </div>
+      </section>
+
+      <ul style="display: inline-block;" class="right hide-on-med-and-down">
+
+        <li><a data-position="bottom" data-tooltip="Food" href="http://localhost:4000/food"
+            class="btn-floating pulse tooltipped"><i class="material-icons">local_dining</i> </a></li>
+        <li><a data-position="bottom" data-tooltip="Toys" href="http://localhost:4000/toys" class="btn-floating pulse tooltipped"><i
+              class="material-icons">toys</i></a></li>
+
+        <li><a data-position="bottom" data-tooltip="More" href="http://localhost:4000/cart"
+            class="btn-floating pulse tooltipped"><i class="material-icons">shopping_cart</i></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <%= a = [] %>
+  <h1 style="text-align: center;">Cart <i class="material-icons">shopping_cart</i></h1>
+  <% if(Cart.length>0){%>
+  <% for(i=0;i<Cart.length;i++){%>
+
+  <div class="list-group">
+    <button type="button" class="list-group-item list-group-item-action ">
+      Item <%=i+1%>
+    </button>
+    <button type="button" class="list-group-item list-group-item-action"><img
+        style="border-radius: 50%; width: 100px; height:100px;" src="<%= Cart[i].Image %>"
+        alt="<%= Cart[i].Title %> Image"> Item Name - <%= Cart[i].Title %> </button>
+    <button type="button" class="list-group-item list-group-item-action">Item Price - $<%= Cart[i].Price%></button>
+    <button type="button" class="list-group-item list-group-item-action">Item Description -
+      <%= Cart[i].Description%></button>
+
+  </div>
+
+
+
+
+  <%}%>
+
+<%}
+else{ %>
+  <hr>
+  <h2 style="text-align: center;">Your Cart Is Empty!</h1>
+
+    <h3 style="text-align: center;">C'mon Buy Something From Us!
+  </h2>
+  <% } %>
+    <!-- FOOTER -->
+    <footer id="footer" style="background-color:#ffab40;" class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Huge Basket</h5>
+            <p class="grey-text text-lighten-4">Huge Basket is a small initiative to help farmers and people who are in
+              need of resources. We also help people who need gifts and sell other stuff to help too. </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Contact Us</h5>
+            <p class="grey-text text-lighten-4">For any help, please feel free to drop us a message or use any of the link
+              below!</p>
+            <ul>
+              <li><a class="grey-text text-lighten-3"
+                  href="randomemail@hugebasket.in"><u>randomemail@hugebasket.in</u></a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">+91 882935810</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://www.amazon.com/"><u>Amazon Our Partner</u></a></li>
+              <li><a class="grey-text text-lighten-3" href="https://www.flipkart.com"><u>Flipcart Our Partner</u></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          No © 2020 Huge Basket
+          <a class="grey-text text-lighten-4 right" href="#!"></a>
+        </div>
+      </div>
+    </footer>
+  
+    <ul style="text-align: center; margin-left: 600px; margin-top: 10px;" class="pagination">
+      <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+      <li class="active"><a href="http://localhost:4000">1</a></li>
+      <li class="waves-effect"><a href="http://localhost:4000/food">2</a></li>
+      <li class="waves-effect"><a href="http://localhost:4000/toys">3</a></li>
+      <li class="waves-effect"><a href="http://localhost:4000/cart">4</a></li>
+      <li class="waves-effect"><a href="https://genderequality.netlify.app/">5</a></li>
+      <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
+  
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="materialize.js"></script>
+  <script src="init.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!--Import materialize.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
